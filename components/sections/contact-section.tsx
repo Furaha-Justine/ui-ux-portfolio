@@ -107,15 +107,22 @@ export function ContactSection() {
   }
 
   return (
-    <SectionContainer ref={sectionRef} id="contact" className="bg-gradient-to-br from-background to-secondary/5">
+    <SectionContainer
+      ref={sectionRef}
+      id="contact"
+      className="bg-gradient-to-br from-background to-secondary/5"
+    >
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6 animate-fade-in-up">Let's Work Together</h2>
+          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6 animate-fade-in-up">
+            Let's Work Together
+          </h2>
           <p
             className="text-xl text-muted-foreground text-pretty max-w-2xl mx-auto animate-fade-in-up"
             style={{ animationDelay: "0.2s" }}
           >
-            Have a project in mind or want to discuss design opportunities? I'd love to hear from you.
+            Have a project in mind or want to discuss design opportunities? I'd
+            love to hear from you.
           </p>
         </div>
 
@@ -130,7 +137,10 @@ export function ContactSection() {
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Name *
                   </label>
                   <Input
@@ -146,7 +156,10 @@ export function ContactSection() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Email *
                   </label>
                   <Input
@@ -162,7 +175,10 @@ export function ContactSection() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Message *
                   </label>
                   <Textarea
@@ -179,7 +195,10 @@ export function ContactSection() {
 
                 {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
                   <div className="text-xs text-muted-foreground bg-muted/50 p-3 rounded-lg">
-                    <p>This form is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+                    <p>
+                      This form is protected by reCAPTCHA and the Google Privacy
+                      Policy and Terms of Service apply.
+                    </p>
                   </div>
                 )}
 
@@ -187,7 +206,9 @@ export function ContactSection() {
                   type="submit"
                   variant="primary"
                   size="lg"
-                  className={`w-full transform hover:scale-105 transition-all-smooth shadow-elegant hover:shadow-elegant-hover ${isSubmitting ? "opacity-50" : ""}`}
+                  className={`w-full transform hover:scale-105 transition-all-smooth shadow-elegant hover:shadow-elegant-hover ${
+                    isSubmitting ? "opacity-50" : ""
+                  }`}
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
@@ -215,17 +236,22 @@ export function ContactSection() {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground mb-8 text-lg">
-                Prefer to talk directly? Schedule a consultation call to discuss your project in detail.
+                Prefer to talk directly? Schedule a consultation call to discuss
+                your project in detail.
               </p>
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-4 p-3 bg-primary/5 rounded-lg">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-foreground">30-60 minute consultation</span>
+                  <span className="text-foreground">
+                    30-60 minute consultation
+                  </span>
                 </div>
                 <div className="flex items-center gap-4 p-3 bg-primary/5 rounded-lg">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-foreground">Project discussion & planning</span>
+                  <span className="text-foreground">
+                    Project discussion & planning
+                  </span>
                 </div>
                 <div className="flex items-center gap-4 p-3 bg-primary/5 rounded-lg">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
@@ -234,12 +260,10 @@ export function ContactSection() {
               </div>
 
               <CTAButton
-                variant="secondary"
-                size="lg"
                 href="/schedule"
-                className="w-full transform hover:scale-105 transition-all-smooth shadow-elegant hover:shadow-elegant-hover"
+                className="w-full inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-primary/90 hover:scale-105 transition-all duration-300"
               >
-                <Calendar className="w-4 h-4 mr-2" />
+                <Calendar className="w-5 h-5 mr-2" />
                 Schedule Appointment
               </CTAButton>
             </CardContent>
@@ -247,5 +271,5 @@ export function ContactSection() {
         </div>
       </div>
     </SectionContainer>
-  )
+  );
 }
