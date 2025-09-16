@@ -201,24 +201,23 @@ export function ContactSection() {
                     </p>
                   </div>
                 )}
-
                 <CTAButton
                   type="submit"
-                  variant="primary"
-                  size="lg"
-                  className={`w-full transform hover:scale-105 transition-all-smooth shadow-elegant hover:shadow-elegant-hover ${
-                    isSubmitting ? "opacity-50" : ""
-                  }`}
                   disabled={isSubmitting}
+                  className={`w-full inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-semibold rounded-lg shadow-md transition-all duration-300 ${
+                    isSubmitting
+                      ? "opacity-50 cursor-not-allowed"
+                      : "hover:bg-primary/90 hover:scale-105"
+                  }`}
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Sending...
                     </>
                   ) : (
                     <>
-                      <Send className="w-4 h-4 mr-2" />
+                      <Send className="w-5 h-5 mr-2" />
                       Send Message
                     </>
                   )}

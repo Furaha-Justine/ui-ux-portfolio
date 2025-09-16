@@ -4,12 +4,18 @@ import { Heart, Globe, Users, Lightbulb } from "lucide-react"
 
 export function GetToKnowMeSection() {
   return (
-    <SectionContainer id="get-to-know-me" className="bg-gradient-to-br from-background to-secondary/5">
+    <SectionContainer
+      id="get-to-know-me"
+      className="bg-gradient-to-br from-background to-secondary/5"
+    >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Get to Know Me</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Get to Know Me
+          </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Beyond the pixels and prototypes, here's what drives my passion for design
+            Beyond the pixels and prototypes, here's what drives my passion for
+            design
           </p>
         </div>
 
@@ -21,10 +27,14 @@ export function GetToKnowMeSection() {
                 <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Heart className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-3">Personal Journey</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-3">
+                  Personal Journey
+                </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  My journey into design began with a fascination for how people interact with technology. I discovered
-                  that the best designs are invisible – they work so seamlessly that users don't even think about them.
+                  My journey into design began with a fascination for how people
+                  interact with technology. I discovered that the best designs
+                  are invisible – they work so seamlessly that users don't even
+                  think about them.
                 </p>
               </CardContent>
             </Card>
@@ -34,10 +44,13 @@ export function GetToKnowMeSection() {
                 <div className="w-16 h-16 bg-secondary/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Lightbulb className="w-8 h-8 text-secondary" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-3">Design Philosophy</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-3">
+                  Design Philosophy
+                </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  I believe in designing with empathy, testing with users, and iterating based on real feedback. Every
-                  pixel has a purpose, and every interaction should feel natural and delightful.
+                  I believe in designing with empathy, testing with users, and
+                  iterating based on real feedback. Every pixel has a purpose,
+                  and every interaction should feel natural and delightful.
                 </p>
               </CardContent>
             </Card>
@@ -47,10 +60,13 @@ export function GetToKnowMeSection() {
                 <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Globe className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-3">Global Perspective</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-3">
+                  Global Perspective
+                </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Having worked with diverse teams across different cultures, I bring a global perspective to design
-                  challenges, ensuring solutions work for users from all backgrounds.
+                  Having worked with diverse teams across different cultures, I
+                  bring a global perspective to design challenges, ensuring
+                  solutions work for users from all backgrounds.
                 </p>
               </CardContent>
             </Card>
@@ -60,35 +76,19 @@ export function GetToKnowMeSection() {
                 <div className="w-16 h-16 bg-secondary/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-secondary" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-3">Community Impact</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-3">
+                  Community Impact
+                </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Outside of work, I enjoy photography, traveling to experience different cultures, and volunteering to
-                  teach design skills to underrepresented communities in tech.
+                  Outside of work, I enjoy photography, traveling to experience
+                  different cultures, and volunteering to teach design skills to
+                  underrepresented communities in tech.
                 </p>
               </CardContent>
             </Card>
           </div>
-
-          {/* Video section */}
-          <div className="max-w-4xl mx-auto">
-            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary/20 to-secondary/20">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 z-10"></div>
-              <iframe
-                src="https://www.youtube.com/embed/90Q9qKnX2RY"
-                title="Introduction Video - Uwizeyimana Furaha Justine"
-                className="w-full h-full relative z-20"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
-            <div className="absolute -top-4 -left-4 w-32 h-32 bg-secondary/20 rounded-full blur-2xl"></div>
-            <p className="text-sm text-muted-foreground mt-6 text-center font-medium">
-              Watch my introduction video to learn more about my design journey and philosophy
-            </p>
-          </div>
         </div>
       </div>
     </SectionContainer>
-  )
+  );
 }

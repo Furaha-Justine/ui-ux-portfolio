@@ -144,15 +144,23 @@ export default function SchedulePage() {
     <div className="min-h-screen bg-background py-12">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
-          <CTAButton variant="secondary" size="sm" href="/" className="mb-6">
-            <ArrowLeft className="w-4 h-4 mr-2" />
+          <CTAButton
+            variant="secondary"
+            size="sm"
+            href="/"
+            className="group mb-6 inline-flex items-center rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 hover:shadow-md hover:bg-secondary/90"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2 transition-transform duration-300 group-hover:-translate-x-1" />
             Back to Portfolio
           </CTAButton>
 
           <div className="text-center">
-            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Schedule a Meeting</h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Schedule a Meeting
+            </h1>
             <p className="text-lg text-muted-foreground text-pretty">
-              Let's discuss your project and how I can help bring your design vision to life.
+              Let's discuss your project and how I can help bring your design
+              vision to life.
             </p>
           </div>
         </div>
@@ -164,14 +172,18 @@ export default function SchedulePage() {
               Book Your Consultation
             </CardTitle>
             <p className="text-muted-foreground">
-              Fill out the form below to schedule a consultation. I'll confirm your appointment within 24 hours.
+              Fill out the form below to schedule a consultation. I'll confirm
+              your appointment within 24 hours.
             </p>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Full Name *
                   </label>
                   <Input
@@ -186,7 +198,10 @@ export default function SchedulePage() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Email Address *
                   </label>
                   <Input
@@ -202,7 +217,10 @@ export default function SchedulePage() {
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Phone Number (Optional)
                 </label>
                 <Input
@@ -217,7 +235,10 @@ export default function SchedulePage() {
 
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="preferredDate" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="preferredDate"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Preferred Date *
                   </label>
                   <Input
@@ -233,14 +254,18 @@ export default function SchedulePage() {
                 </div>
 
                 <div>
-                  <label htmlFor="preferredTime" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="preferredTime"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Preferred Time *
                   </label>
                   {isLoadingSlots ? (
                     <div className="flex items-center justify-center h-10 border rounded-md">
                       <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary"></div>
                     </div>
-                  ) : availableSlots && availableSlots.availableSlots.length > 0 ? (
+                  ) : availableSlots &&
+                    availableSlots.availableSlots.length > 0 ? (
                     <select
                       id="preferredTime"
                       name="preferredTime"
@@ -256,7 +281,8 @@ export default function SchedulePage() {
                         </option>
                       ))}
                     </select>
-                  ) : availableSlots && availableSlots.availableSlots.length === 0 ? (
+                  ) : availableSlots &&
+                    availableSlots.availableSlots.length === 0 ? (
                     <div className="flex items-center justify-center h-10 border rounded-md text-muted-foreground text-sm">
                       No available slots for this date
                     </div>
@@ -269,7 +295,10 @@ export default function SchedulePage() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Project Details (Optional)
                 </label>
                 <Textarea
@@ -286,10 +315,14 @@ export default function SchedulePage() {
                 <div className="flex items-start gap-3">
                   <Clock className="w-5 h-5 text-primary mt-0.5" />
                   <div>
-                    <h4 className="font-medium text-foreground mb-1">What to Expect</h4>
+                    <h4 className="font-medium text-foreground mb-1">
+                      What to Expect
+                    </h4>
                     <ul className="text-sm text-muted-foreground space-y-1">
                       <li>• 30-60 minute consultation call</li>
-                      <li>• Discussion of your project goals and requirements</li>
+                      <li>
+                        • Discussion of your project goals and requirements
+                      </li>
                       <li>• Overview of my design process and approach</li>
                       <li>• Timeline and next steps planning</li>
                     </ul>
@@ -313,7 +346,10 @@ export default function SchedulePage() {
         <div className="mt-8 text-center">
           <p className="text-sm text-muted-foreground">
             Need to discuss something urgently?{" "}
-            <a href="mailto:uwizefuraha@gmail.com" className="text-primary hover:underline">
+            <a
+              href="mailto:uwizefuraha@gmail.com"
+              className="text-primary hover:underline"
+            >
               Send me an email
             </a>{" "}
             instead.
@@ -321,5 +357,5 @@ export default function SchedulePage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

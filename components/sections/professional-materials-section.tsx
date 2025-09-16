@@ -18,39 +18,64 @@ export function ProfessionalMaterialsSection() {
   return (
     <SectionContainer id="professional-materials" className="bg-card">
       <div className="text-center max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">Professional Materials</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
+          Professional Materials
+        </h2>
         <p className="text-lg text-muted-foreground mb-12 text-pretty">
-          Download my professional documents to learn more about my experience, skills, and career journey.
+          Download my professional documents to learn more about my experience,
+          skills, and career journey.
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-background p-8 rounded-lg shadow-sm border">
             <div className="mb-6">
               <Download className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-foreground mb-2">Curriculum Vitae</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-2">
+                Curriculum Vitae
+              </h3>
               <p className="text-muted-foreground">
-                Comprehensive overview of my professional experience, education, and achievements in UI/UX design.
+                Comprehensive overview of my professional experience, education,
+                and achievements in UI/UX design.
               </p>
             </div>
             <CTAButton variant="primary" size="md" onClick={handleDownloadCV}>
-              Download CV
+              <a
+                href="https://www.canva.com/design/DAGwE4K-G60/GoCnxeDvW5QwvoOLK3HTHw/view?utm_content=DAGwE4K-G60&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hcfcde0e42d"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download CV
+              </a>
             </CTAButton>
           </div>
 
           <div className="bg-background p-8 rounded-lg shadow-sm border">
             <div className="mb-6">
               <Download className="w-12 h-12 text-secondary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-foreground mb-2">Cover Letter</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-2">
+                Cover Letter
+              </h3>
               <p className="text-muted-foreground">
-                Personal introduction highlighting my passion for design and what I can bring to your team.
+                Personal introduction highlighting my passion for design and
+                what I can bring to your team.
               </p>
             </div>
-            <CTAButton variant="secondary" size="md" onClick={handleDownloadCoverLetter}>
-              Download Cover Letter
+            <CTAButton
+              variant="secondary"
+              size="md"
+              onClick={handleDownloadCoverLetter}
+            >
+              <a
+                href="https://www.canva.com/design/DAGc3Vb-F0U/5eGkSEKlfHyZ-IrtoUoVSw/view?utm_content=DAGc3Vb-F0U&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1178178b7c"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download Cover Letter
+              </a>
             </CTAButton>
           </div>
         </div>
       </div>
     </SectionContainer>
-  )
+  );
 }
